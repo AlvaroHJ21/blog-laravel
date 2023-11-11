@@ -1,5 +1,5 @@
 <div class="py-8 border-b-2">
-    <a href="/" class="mb-4 block group">
+    <a href="/posts/{{ $id }}" class="mb-4 block group">
         <h3 class="font-black text-3xl mb-2 group-hover:text-cyan-600">
             {{ $title }}
         </h3>

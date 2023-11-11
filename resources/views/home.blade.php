@@ -13,7 +13,7 @@
     </section>
     <main class="container max-w-screen-sm m-auto">
         @foreach ($posts as $post)
-            <x-post title="{{ $post->title }}" subtitle="{{ $post->subtitle }}" />
-        @endforeach ()
+            <x-post id="{{ $post->id }}" title="{{ $post->title }}" subtitle="{{ $post->subtitle }}" />
+        @endforeach
     </main>
 @endsection
