@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.default')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @vite('resources/css/app.css')
-</head>
+@section('title', 'Home')
 
-<body class="bg-slate-900 text-white">
-    <main class="container max-w-screen-lg m-auto">
-        <h1 class="py-8 text-2xl">Productos</h1>
+@section('content')
+    <section class="w-full relative flex justify-center items-center">
+        <img src="https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg" alt=""
+            class="w-full max-h-80 object-cover brightness-75">
+        <div class="absolute">
+            <h1 class="text-5xl font-black font-serif text-white">Alvaro's Blog</h1>
+        </div>
+    </section>
+    <main class="container max-w-screen-sm m-auto">
+        <x-post />
+        <x-post />
+        <x-post />
+        <x-post />
     </main>
-</body>
-
-</html>
+@endsection
