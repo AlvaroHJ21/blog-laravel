@@ -11,7 +11,10 @@ class PageController extends Controller
     {
         $search = $request->search;
 
-        $posts = Post::where("title", "LIKE", "%{$search}%")->orderBy('created_at', 'desc')->paginate(5);
+        $posts = Post::where("title", "LIKE", "%{$search}%")
+            ->orderBy('created_at', 'desc')
+            ->with("user")
+            ->paginate(5);
 
         return view('home', compact('posts'));
     }
