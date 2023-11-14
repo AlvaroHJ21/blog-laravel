@@ -21,6 +21,7 @@ class PostFactory extends Factory
             'subtitle' => $this->faker->sentence(),
             'body' => $this->faker->paragraphs(3, true),
             'image' => $this->faker->imageUrl(),
+            'user_id' => 1
         ];
     }
 }

@@ -3,17 +3,19 @@
 @section('title', 'Home')
 
 @section('content')
-    <section class="w-full relative flex justify-center items-center">
+    <section class="relative flex items-center justify-center w-full">
         <img src="https://switzerland-tour.com/storage/media/4-ForArticles/swiss-mountains.jpg" alt=""
-            class="w-full max-h-80 object-cover brightness-75">
-        <div class="absolute text-white text-center">
-            <h1 class="text-5xl font-black font-serif mb-4">Alvaro's Blog</h1>
+            class="object-cover w-full max-h-80 brightness-75">
+        <div class="absolute text-center text-white">
+            <h1 class="mb-4 font-serif text-5xl font-black">Alvaro's Blog</h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </div>
     </section>
     <main class="container max-w-screen-sm m-auto">
         @foreach ($posts as $post)
-            <x-post id="{{ $post->id }}" title="{{ $post->title }}" subtitle="{{ $post->subtitle }}" />
+            {{-- <x-post id="{{ $post->id }}" title="{{ $post->title }}" subtitle="{{ $post->subtitle }}" /> --}}
+            @include('components.post')
+            {{-- ['post' => $post] --}}
         @endforeach
     </main>
 @endsection

@@ -29,7 +29,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate(
+            $request,
+            [
+                "title" => "required|string",
+                "subtitle" => "required|string",
+                "body" => "required|string",
+                "image" => "required|string",
+            ]
+        );
+
+        $request->merge(["user_id" => 1]); //auth()->user()->id
+
+        Post::create($request->all());
+        return redirect()->route("home");
     }
 
     /**
