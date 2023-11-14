@@ -15,7 +15,7 @@
                         <div class="col-span-2">
                             <div class="flex p-8 mb-4 border">
                                 <div class="flex-1">
-                                    <p class="mb-2 text-2xl font-bol">Hello {{ Auth::user()->name }}</p>
+                                    <p class="mb-2 text-2xl font-bol">Hello {{ Auth::user()->name }}!</p>
                                     <p class="mb-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti
                                         veritatisveniam aperiamaccusamus voluptates dolorum velit officiis
                                         exercitationem at.</p>
