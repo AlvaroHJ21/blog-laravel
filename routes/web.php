@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Post;
@@ -17,14 +18,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
-    $posts = Post::all();
-    return view('home', compact('posts'));
-})->name("home");
-
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/', [PageController::class, "home"])->name("home");
+Route::get('/contact', [PageController::class, "contact"])->name("contact");
 
 /*
 |--------------------------------------------------------------------------
