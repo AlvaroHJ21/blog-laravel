@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-gray-50">
-    <header class="bg-cyan-950 py-4 text-white">
+    <header class="sticky top-0 z-10 py-4 text-white bg-cyan-950">
         <div class="flex justify-between max-w-screen-lg m-auto">
             <a href="/">AlvaroHJ</a>
             <ul class="flex gap-8">
@@ -23,29 +23,30 @@
                 <li>
                     <a href="/contact">Contacto</a>
                 </li>
-                <li>
-                    <a href="/login">Login</a>
-                </li>
-                <li>
-                    <a href="/register">Register</a>
-                </li>
+                @auth
+                    <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                @else
+                    <li>
+                        <a href="{{ route('login') }}">Login</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </header>
     @yield('content')
     <footer class="py-8">
-        <div class="flex gap-4 m-auto w-fit mb-4">
-            <a href="/" class="w-10 h-10 rounded-full bg-black text-white grid place-content-center">
+        <div class="flex gap-4 m-auto mb-4 w-fit">
+            <a href="/" class="grid w-10 h-10 text-white bg-black rounded-full place-content-center">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="/" class="w-10 h-10 rounded-full bg-black text-white grid place-content-center">
+            <a href="/" class="grid w-10 h-10 text-white bg-black rounded-full place-content-center">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="/" class="w-10 h-10 rounded-full bg-black text-white grid place-content-center">
+            <a href="/" class="grid w-10 h-10 text-white bg-black rounded-full place-content-center">
                 <i class="fab fa-youtube"></i>
             </a>
         </div>
-        <p class="text-center font-serif text-gray-500">
+        <p class="font-serif text-center text-gray-500">
             &copy; AlvaroHJ - {{ date('Y') }}
         </p>
     </footer>

@@ -1,5 +1,5 @@
 <div class="py-8 border-b-2">
-    <a href="/posts/{{ $post->id }}" class="block mb-4 group">
+    <a href="{{route("posts.show-by-slug", $post->slug)}}" class="block mb-4 group">
         <h3 class="mb-2 text-3xl font-black group-hover:text-cyan-600">
             {{ $post->title }}
         </h3>

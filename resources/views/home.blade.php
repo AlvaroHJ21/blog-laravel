@@ -17,5 +17,7 @@
             @include('components.post')
             {{-- ['post' => $post] --}}
         @endforeach
+
+        <input type="text" name="" id="">
     </main>
 @endsection
