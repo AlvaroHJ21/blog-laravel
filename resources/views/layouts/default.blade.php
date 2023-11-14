@@ -18,7 +18,9 @@
 <body class="bg-gray-50">
     <header class="sticky top-0 z-10 py-4 text-white bg-cyan-950">
         <div class="flex justify-between max-w-screen-lg m-auto w-[90%]">
-            <a href="/">AlvaroHJ</a>
+            <a href="/" class="flex items-center gap-2">
+                <x-application-logo class="block w-auto text-white fill-current h-9" />LARABLOG
+            </a>
             <ul class="flex gap-8">
                 <li>
                     <a href="/">Home</a>
