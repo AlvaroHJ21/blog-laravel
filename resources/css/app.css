@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-    input {
+@layer base {
+    /* input {
         @apply w-full px-4 py-2 border focus:outline-cyan-500;
+    } */
+
+    .content p {
+        @apply mb-3;
     }
-} */
+
+    .content h2 {
+        @apply text-2xl font-semibold mb-3;
+    }
+
+    .content h3 {
+        @apply text-xl font-semibold mb-3;
+    }
+
+    .content a {
+        @apply underline hover:text-cyan-700;
+    }
+}
 
 @layer components {
     .btn {

@@ -25,7 +25,7 @@
         <span class="text-sm text-red-500">{{ $message }}</span>
     @enderror
 </div>
-<div class="mb-3">
+<div class="mb-3 content">
     <label for="" class="block">Contenido</label>
     <textarea id="editor" name="body"
         class="w-full px-4 py-2 border border-gray-300 focus:border-cyan-500 focus:ring-cyan-500">
